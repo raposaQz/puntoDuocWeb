@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuntoDuoc | Crear Evento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="#" class="logo"><span>Punto</span><span>Duoc</span></a></li>
+        <li><a href="#">Histórico de Eventos</a></li>
+        <li><a href="#">Administrador de eventos</a></li>
+        <li style="float:right"><a class="active" href="#">Logout</a></li>
+    </ul>
+
+    <h1>Crear nuevo evento</h1>
+
+    <form>
+
+<!---Título Evento-->
+        <label for="titulo-ev">Título de Evento:</label>
+        <input type="text" id="titulo-ev" name="titulo-ev" placeholder="Charla: La importancia de la música en el ser humano">
+
+<!---Organizador de Evento-->
+        <label for="organizador-ev">Organizador de Evento:</label>
+        <input type="text" id="organizador-ev" name="organizador-ev" placeholder="Administración Duoc UC">
+
+<!---Fecha de Inicio-->
+        <label for="fecha-inicio-ev">Fecha de Inicio:</label>
+        <input type="date" id="fecha-inicio-ev" name="fecha-inicio-ev">
+
+<!---Hora de Inicio-->
+        <label for="hora-inicio-ev">Hora:</label>
+        <input type="time" id="hora-inicio-ev" name="hora-inicio-ev">
+
+<!---Formato (Select)-->
+        <label for="formato-select">Formato:</label>
+        <select name="formatos" id="formato-select">
+          <option value="" selected>--Selecciona el formato--</option>
+          <option value="online">Online</option>
+          <option value="presencial">Presencial</option>
+          <option value="online-y-presencial">Online y presencial</option>
+        </select>
+
+<!---Ubicación Evento-->
+        <label for="ubicacion-ev">Ubicación:</label>
+        <input type="text" id="ubicacion-ev" name="ubicacion-ev" placeholder="Avenida Concha y Toro 1340, Puente Alto">
+
+
+<!---Tipo de Evento (Select)-->
+        <label for="tipo-evento-select">Tipo de Evento:</label>
+        <select name="tipos-evento" id="tipo-evento-select">
+        <option value="" selected>--Escoge tipo de evento--</option>
+        <option value="charla">Charla</option>
+        <option value="ciclode-cine">Ciclo de Cine</option>
+        <option value="concierto">Concierto</option>
+        <option value="concurso">Concurso</option>
+        <option value="exposicion">Exposición</option>
+        <option value="taller">Taller</option>
+        </select>
+
+<!---Detalles Evento (TextArea)-->
+        <label for="detalles-ev">Detalles Evento:</label>
+        <textarea id="detalles-ev" name="detalles-ev" rows="5" cols="33" placeholder="Información sobre el evento..."></textarea>
+
+<!---Sede (Select)-->
+        <label for="sede-select">Sede:</label>
+        <select name="sedes" id="sede-select">
+            <option value="" selected>--Escoge una sede--</option>
+            <option value="duoc-antonio-varas">Duoc UC Antonio Varas</option>
+            <option value="duoc-puente-alto">Duoc UC Puente Alto</option>
+            <option value="duoc-san-bernardo">Duoc UC San Bernardo</option>
+        </select>
+
+<!--Público (Select)-->
+        <label for="publico-select">Dirigido A:</label>
+        <select name="publicos" id="publico-select">
+            <option value="" selected>--Escoge un público--</option>
+            <option value="estudiantes">Estudiantes</option>
+            <option value="todo-publico">Todo Público</option>
+        </select>
+
+<!--Imagen Evento (Upload)-->
+        <label for="imagen-ev">Escoge una imagen para el evento:</label>
+        <input type="file" id="imagen-ev" name="imagen-ev" accept="image/png, image/jpeg" />
+
+
+
+<!---Estado Evento (Select)-->
+        <label for="estado-evento-select">Estado de Evento (Editar evento para cambiar):</label>
+        <select name="estado-evento-select" id="estado-evento-select" disabled>
+            <option value="pendiente" selected>Pendiente</option>
+            <option value="aprobado">Aprobado</option>
+            <option value="cancelado">Cancelado</option>
+            <option value="finalizado">Finalizado</option>
+        </select><br><br>
+
+        <input type="submit" value="Guardar">
+    </form>
+
+
+
+</body>
+
+</html>
